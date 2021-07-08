@@ -1,9 +1,9 @@
 import { Container } from './styles';
 
-export function MyComponent() {
+export function UserProfile() {
   return (
     <Container>
-      <h1>MyComponent</h1>
+      <h2>My User Profile</h2>
     </Container>
   );
 };
