@@ -16,12 +16,3 @@ function counterReducer(state = {counter: 0}, action) {
 }
 
 export const store = createStore(counterReducer);
-
-// function counterSubscriber() {
-//   const latestState = store.getState();
-//   console.log(latestState);
-// }
-
-// store.subscribe(counterSubscriber);
-// store.dispatch('increment');
-// store.dispatch('decrement');

@@ -15,6 +15,10 @@ export const Container = styled.main`
     margin: 0;
     font-size: 1rem;
   }
+
+  button {
+    margin: 1rem;
+  }
 `;
 
 export const Value = styled.div`
