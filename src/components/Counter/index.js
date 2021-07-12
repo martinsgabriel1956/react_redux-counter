@@ -2,6 +2,8 @@ import { useSelector, useDispatch} from 'react-redux';
 
 import { Container, Value } from './styles';
 
+import { counterActions } from '../../store';
+
 import { Button } from '../UI/Button';
 
 export function Counter() {
@@ -10,19 +12,19 @@ export function Counter() {
   const show = useSelector(state => state.showCounter);
 
   function handleIncrement() {
-    dispatch({ type: 'increment'});
+    dispatch(counterActions.increment());
   }
   
   function handleIncrease() {
-    dispatch({ type: 'increase', amount: 10});
+    dispatch(counterActions.increase(10));
   }
   
   function handleDecrement() {
-    dispatch({ type: 'decrement'});
+    dispatch(counterActions.decrement());
   }
   
   function handleToggleCounter() {
-    dispatch({ type: 'toggle'});
+    dispatch(counterActions.toggleCounter());
 
   }
 
