@@ -2,7 +2,7 @@ import { useSelector, useDispatch} from 'react-redux';
 
 import { Container, Value } from './styles';
 
-import { counterActions } from '../../store';
+import { counterActions } from '../../store/counter';
 
 import { Button } from '../UI/Button';
 

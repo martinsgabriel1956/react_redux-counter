@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 
-import { authActions } from '../../store';
+import { authActions } from '../../store/auth';
 
 import { Container, LogoutButton } from "./styles";
 
 export function Header() {
-  const isAuth = useSelector((state) => state.auth.isAuthenticated);
+  const isAuth = useSelector(state => state.auth.isAuthenticated);
   const dispatch = useDispatch();
 
   function handleLogout() {
