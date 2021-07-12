@@ -7,6 +7,7 @@ import { Button } from '../UI/Button';
 export function Counter() {
   const dispatch = useDispatch();
   const counter = useSelector(state => state.counter);
+  const show = useSelector(state => state.showCounter);
 
   function handleIncrement() {
     dispatch({ type: 'increment'});
@@ -20,15 +21,18 @@ export function Counter() {
     dispatch({ type: 'decrement'});
   }
   
-  function handleToggleCounter() {}
+  function handleToggleCounter() {
+    dispatch({ type: 'toggle'});
+
+  }
 
 
   return (
     <Container>
       <h1>Redux Counter</h1>
-      <Value>
+      {show && <Value>
       {counter}
-      </Value>
+      </Value>}
       <div>
         <Button onClick={handleIncrement}>Increment</Button>
         <Button onClick={handleIncrease}>Increase by 10</Button>
