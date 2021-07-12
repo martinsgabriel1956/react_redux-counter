@@ -8,7 +8,7 @@ import { Button } from '../UI/Button';
 
 export function Counter() {
   const dispatch = useDispatch();
-  const counter = useSelector(state => state.counter);
+  const counter = useSelector(state => state.counter.counter);
   const show = useSelector(state => state.showCounter);
 
   function handleIncrement() {
@@ -25,9 +25,7 @@ export function Counter() {
   
   function handleToggleCounter() {
     dispatch(counterActions.toggleCounter());
-
   }
-
 
   return (
     <Container>
