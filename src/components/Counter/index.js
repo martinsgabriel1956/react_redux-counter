@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 
 import { Container, Value } from './styles';
 
@@ -10,6 +10,10 @@ export function Counter() {
 
   function handleIncrement() {
     dispatch({ type: 'increment'});
+  }
+  
+  function handleIncrease() {
+    dispatch({ type: 'increase', amount: 10});
   }
   
   function handleDecrement() {
@@ -27,6 +31,7 @@ export function Counter() {
       </Value>
       <div>
         <Button onClick={handleIncrement}>Increment</Button>
+        <Button onClick={handleIncrease}>Increase by 10</Button>
         <Button onClick={handleDecrement}>Decrement</Button>
       </div>
       <Button onClick={handleToggleCounter}>
